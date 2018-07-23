@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitec0819b720087bc43818afccc789444e
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/mainfobr/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'M' => 
+        array (
+            'Mainfo\\' => 7,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Mainfo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mainfo/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInitec0819b720087bc43818afccc789444e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInitec0819b720087bc43818afccc789444e::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitec0819b720087bc43818afccc789444e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitec0819b720087bc43818afccc789444e::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitec0819b720087bc43818afccc789444e::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitec0819b720087bc43818afccc789444e::$classMap;
 
